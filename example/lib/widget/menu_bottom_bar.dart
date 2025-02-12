@@ -29,7 +29,7 @@ class _MenuBottomBarState extends State<MenuBottomBar>
     if (widget.expandedHeight != null) {
       return widget.expandedHeight!;
     }
-    return math.min(400, MediaQuery.of(context).size.height - 200);
+    return math.min(400, MediaQuery.sizeOf(context).height - 200);
   }
 
   late AnimationController _animationController;

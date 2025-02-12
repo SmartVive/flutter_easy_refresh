@@ -96,7 +96,7 @@ class TabBarViewPageState extends State<TabBarViewPage>
               physics: physics,
               onlyOneScrollInBody: true,
               pinnedHeaderSliverHeightBuilder: () {
-                return MediaQuery.of(context).padding.top + kToolbarHeight;
+                return MediaQuery.paddingOf(context).top + kToolbarHeight;
               },
               headerSliverBuilder: (context, innerBoxIsScrolled) {
                 return <Widget>[

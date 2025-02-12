@@ -41,7 +41,7 @@ class NestedScrollViewPageState extends State<NestedScrollViewPage>
       body: ExtendedNestedScrollView(
         onlyOneScrollInBody: true,
         pinnedHeaderSliverHeightBuilder: () {
-          return MediaQuery.of(context).padding.top + kToolbarHeight;
+          return MediaQuery.paddingOf(context).top + kToolbarHeight;
         },
         headerSliverBuilder: (context, innerBoxIsScrolled) {
           return <Widget>[

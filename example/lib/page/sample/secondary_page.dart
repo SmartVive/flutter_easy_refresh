@@ -39,8 +39,7 @@ class _SecondaryPageState extends State<SecondaryPage> {
   @override
   Widget build(BuildContext context) {
     final themeData = Theme.of(context);
-    final mediaQuery = MediaQuery.of(context);
-    final size = mediaQuery.size;
+    final size = MediaQuery.sizeOf(context);
     return Scaffold(
       body: EasyRefresh(
         controller: _controller,
@@ -62,7 +61,7 @@ class _SecondaryPageState extends State<SecondaryPage> {
           ),
           secondaryTriggerOffset: 120,
           secondaryDimension:
-              size.height - kToolbarHeight - mediaQuery.padding.top,
+              size.height - kToolbarHeight - MediaQuery.paddingOf(context).top,
           listenable: _listenable,
           builder: (context, state, header) {
             final mode = state.mode;
